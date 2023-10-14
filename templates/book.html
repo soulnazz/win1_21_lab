@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Список книг</h1>
+   {% for book in book_key %}
+    <li>
+        <h2>{{book.title}}</h2>
+        <p><em>{{book.description}}</em></p>
+        <img src="{{book.image.url}}"  alt="{{ book.title }}" width="200">
+        <p>Стоимость: {{book.cost}} сом </p>
+        <p>Дата создания: {{book.created_date}}</p>
+    </li>
+    {% endfor %}
+</body>
+</html>
