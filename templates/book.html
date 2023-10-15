@@ -1,19 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>Список книг</h1>
-   {% for book in book_key %}
-    <li>
-        <h2>{{book.title}}</h2>
-        <p><em>{{book.description}}</em></p>
-        <img src="{{book.image.url}}"  alt="{{ book.title }}" width="200">
-        <p>Стоимость: {{book.cost}} сом </p>
-        <p>Дата создания: {{book.created_date}}</p>
-    </li>
+{% include 'header.html' %}
+
+<br><center><span<span class="badge" style="background-color:saddlebrown; color: white;"><h1>Список книг</h1></span></center><br>
+<div class="flex" style="display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+    align-items: center;
+    justify-content: center;
+    gap: 50px;">
+
+    {% for book in book_key %}
+   <div class="card" style="width: calc(33.33% - 10px);
+    margin-bottom: 20px; ">
+      <div class="card-body">
+        <h3 style="font-size: 18px;
+    margin-top: 0;">{{book.title}}</h3>
+          <img src="{{book.image.url}}"  alt="{{ book.title }}" width="200">
+          <p><em>{{book.description}}</em></p>
+          <p>Стоимость: {{book.cost}} сом </p>
+          <a href="book_detail/" class="btn btn-primary">Подробнее</a>
+      </div>
+
+   </div>
     {% endfor %}
-</body>
-</html>
+</div>
+{% include 'footer.html' %}
+#{{i.id}}/
+
+
+
+
+
