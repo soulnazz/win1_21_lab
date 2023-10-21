@@ -11,5 +11,18 @@
     <img src="{{book_key.image.url}}" alt="book_title" width="400" style="margin-right:60px; margin-left:50px;">   <iframe src="{{book_key.video}}" frameborder="0" width="600" height="400" ></iframe>
     <p>{{book_key.actuality}}</p>
     <p>{{book_key.created_date}}</p>
+
+ <table border="2">
+        <tr>
+            <th>Дата создания отзыва</th> <th>Комент</th> <th>Оценка</th>
+        </tr>
+
+        {% for i in book_key.review_object.all %}
+        <tr>
+            <td>{{i.created_at}}</td> <td>{{i.text_review}}</td> <td>{{i.rate_stars}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
 </body>
 </html>
