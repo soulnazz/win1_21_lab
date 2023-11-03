@@ -1,4 +1,3 @@
-
 from pathlib import Path
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -9,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%%r2hiy23&9%e_mk7ikd$mj#^&=vd9cm4_ns(7%*88-cd4f+wn'
+SECRET_KEY = 'django-insecure-q&hr2na#z36ubjbc=49z=7*b#u94lvca1zqgs(pwr*&-ld-ph)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -93,7 +92,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'ru-ru'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'Asia/Bishkek'
 

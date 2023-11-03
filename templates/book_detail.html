@@ -5,12 +5,15 @@
     <title>Detail</title>
 </head>
 <body>
+    <button><a href="/book_list/{{object.id}}/update/">Изменить</a> </button>
+    <button><a href="/book_list/{{object.id}}/delete/">Удалить</a> </button>
     <h1>Детальная информация</h1>
-    <h2>{{book_key.title}}</h2>
-    <p>{{book_key.description}}</p>
-    <img src="{{book_key.image.url}}" alt="book_title" width="400" style="margin-right:60px; margin-left:50px;">   <iframe src="{{book_key.video}}" frameborder="0" width="600" height="400" ></iframe>
-    <p>{{book_key.actuality}}</p>
-    <p>{{book_key.created_date}}</p>
+    <h2>{{object.title}}</h2>
+    <p>{{object.description}}</p>
+    <img src="{{object.image.url}}" alt="book_title" width="400" style="margin-right:60px; margin-left:50px;">   <iframe src="{{object.video}}" frameborder="0" width="600" height="400" ></iframe>
+    <p>{{object.actuality}}</p>
+    <p>{{object.created_date}}</p>
+    <p>{{object.created_at}}</p>
 
  <table border="2">
         <tr>

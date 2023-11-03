@@ -20,4 +20,6 @@ class Migration(migrations.Migration):
             name='video',
             field=models.URLField(null=True),
         ),
+
+
     ]

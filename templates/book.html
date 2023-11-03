@@ -8,7 +8,7 @@
     justify-content: center;
     gap: 50px;">
 
-    {% for book in book_key %}
+    {% for book in object_list %}
    <div class="card" style="width: calc(33.33% - 10px);
     margin-bottom: 20px; ">
       <div class="card-body">
@@ -17,14 +17,14 @@
           <img src="{{book.image.url}}"  alt="{{ book.title }}" width="200">
           <p><em>{{book.description}}</em></p>
           <p>Стоимость: {{book.cost}} сом </p>
-          <a href="book_detail/" class="btn btn-primary">Подробнее</a>
+          <a href="/book_detail/{{i.id}}/" class="btn btn-primary">Подробнее</a>
       </div>
 
    </div>
     {% endfor %}
 </div>
 {% include 'footer.html' %}
-#{{i.id}}/
+
 
 
 

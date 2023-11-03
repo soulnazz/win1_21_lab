@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Главная</a>
+          <a class="nav-link active" aria-current="page" href="book.html">Главная</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/add-comment/">оставьте отзыв</a>
@@ -27,17 +27,17 @@
             Действие
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/create_book/">Добавить</a></li>
-            <li><a class="dropdown-item" href="/delete_book/">Удалить</a></li>
-            <li><a class="dropdown-item" href="#">Изменить</a></li>
+            <li><a class="dropdown-item" href="/create_post_book/">Добавить</a></li>
+            <li><a class="dropdown-item" href="/book_list/">Удалить</a></li>
+            <li><a class="dropdown-item" href="/book_list/">Изменить</a></li>
           </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled">Отключенная</a>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+      <form action="{% url 'search' %}" method="GET" class="d-flex" role="search">
+        <input class="form-control me-2" type="text" name="q" type="search" placeholder="Поиск" aria-label="Поиск">
         <button class="btn btn-outline-success" type="submit">Поиск</button>
       </form>
     </div>

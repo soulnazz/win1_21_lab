@@ -9,11 +9,12 @@ class Book(models.Model):
 
     title = models.CharField(max_length=30)
     description = models.TextField()
-    image = models.ImageField(upload_to='')
+    image = models.FileField(upload_to='', null=True)
     actuality = models.CharField(max_length=100, choices=ACTUALITY, default=ACTUALITY[0], null=True)
     video = models.URLField(null=True)
     cost = models.SmallIntegerField()
-    created_date = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    created_date= models.DateField(null=True)
 
 
 
