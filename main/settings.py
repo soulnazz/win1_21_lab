@@ -26,6 +26,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'book',
+    'custom_users',
+    'hashtags',
+    'cloth'
+
 ]
 
 MIDDLEWARE = [

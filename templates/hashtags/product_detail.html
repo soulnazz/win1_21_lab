@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+<h1>{{object.name}}</h1>
+<img src="{{object.image.url}}"   width="200">
+<p>{{object.description}}</p>
+<p>Цена: {{object.cost}}</p>
+<p>Опубликована: {{object.created_at}}</p>
+<p>Хештеги:</p>
+<ul>
+    {% for i in object.tag.all %}
+        <li>
+            <p><strong><i>#{{ i.name }}</i></strong></p>
+
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

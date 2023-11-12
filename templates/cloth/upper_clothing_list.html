@@ -1,0 +1,27 @@
+{% include 'header.html' %}
+
+
+  <h2>Верхние одежды</h2>
+  <div class="flex" style="display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+    align-items: center;
+    justify-content: center;
+    gap: 50px;">
+    {% for i in clothing %}
+      <div class="card" style="width: calc(33.33% - 10px);
+    margin-bottom: 20px; ">
+      <div class="card-body">
+        <h3 style="font-size: 18px;
+    margin-top: 0;">{{i.title}}</h3>
+          <img src="{{i.image.url}}"  alt="{{ i.title }}" width="200">
+          <p><em>{{i.description}}</em></p>
+          <p>Стоимость: {{i.cost}} сом </p>
+
+      </div>
+
+   </div>
+    {% endfor %}
+  </div>
+
+{% include 'footer.html' %}

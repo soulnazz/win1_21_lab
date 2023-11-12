@@ -1,0 +1,11 @@
+{% include 'header.html' %}
+
+{% block content %}
+  <h2>Create Order</h2>
+  <form method="post" action="{% url 'order-create' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Create Order</button>
+  </form>
+{% endblock %}
+{% include 'footer.html' %}

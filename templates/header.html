@@ -21,7 +21,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/add-comment/">оставьте отзыв</a>
+           <a class="nav-link" href="/register/">Создать аккаунт</a>
         </li>
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Действие
@@ -32,8 +34,18 @@
             <li><a class="dropdown-item" href="/book_list/">Изменить</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Отключенная</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Одежды
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/all-clothing/">Список одежд</a></li>
+            <li><a class="dropdown-item" href="/upper-clothing/">Верхние одежды</a></li>
+            <li><a class="dropdown-item" href="/headwear-clothing/">Головные уборы</a></li>
+            <li><a class="dropdown-item" href="/lower-clothing/">Нижняя одежда</a></li>
+            <li><a class="dropdown-item" href="/footwear-clothing/">Обувь</a></li>
+            <li><a class="dropdown-item" href="/customer-create/">Заказать</a></li>
+          </ul>
         </li>
       </ul>
       <form action="{% url 'search' %}" method="GET" class="d-flex" role="search">

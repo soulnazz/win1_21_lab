@@ -1,0 +1,11 @@
+{% include 'header.html' %}
+
+
+  <h2>Create Customer</h2>
+  <form method="post" action="{% url 'customer-create' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Create Customer</button>
+  </form>
+<a href="/create-order/">У вас есть аккаунта?</a>
+{% include 'footer.html' %}
